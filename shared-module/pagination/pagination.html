@@ -1,0 +1,42 @@
+<div class="pagination">
+  <label class="pagination__input-keeper" for="select">
+    <span class="pagination__input-text"> Строк на странице: </span>
+    <!-- Custom Select Component -->
+    <div class="custom-select">
+      <select
+        id="select"
+        class="custom-select__select pagination__input pagination__input_select"
+      >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="40">40</option>
+        <option value="60">60</option>
+      </select>
+      <img
+        class="custom-select__icon"
+        src="./assets/icons/caret-down.svg"
+        draggable="false"
+        alt="Down Arrow"
+      />
+    </div>
+  </label>
+  <label class="pagination__input-keeper">
+    <span class="pagination__input-text"> к строке: </span>
+    <input type="number" class="pagination__input" min="1" max="127" />
+  </label>
+  <div class="pagination__action-keeper">
+    <span class="pagination__currenct-page"> 1-20 из 127 </span>
+    <div class="pagination__action">
+      <button class="pagination__button pagination__button_prev button">
+        <img
+          src="./assets/icons/chevron-left.svg"
+          alt="Back to previous page"
+        />
+      </button>
+      <button class="pagination__button pagination__button_next button">
+        <img src="./assets/icons/chevron-right.svg" alt="Go to next page" />
+      </button>
+    </div>
+  </div>
+</div>

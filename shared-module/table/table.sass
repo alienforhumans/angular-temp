@@ -1,0 +1,48 @@
+.table
+  width: 100%
+  border-collapse: collapse
+  &__head:after
+    content: "@"
+    display: table-row
+    line-height: 12px
+    width: 100%
+    text-indent: -99999px
+    border-bottom: borders.$dark
+  &__body
+    position: relative
+    width: 100%
+    &:before
+      content: "@"
+      display: table-row
+      line-height: 12px
+      text-indent: -99999px
+      width: 100%
+  &__row
+    padding: 4px
+    height: 28px
+    border-radius: borders.$radius
+    cursor: pointer
+    transition: background-color transitions.$short
+    &:hover
+      background-color: colors.$additional-grey
+    &:not(&:last-child)
+      margin-bottom: 12px
+  &__cell
+    &-text
+      font-weight: normal
+      font-size: 14px
+      line-height: 16px
+      color: colors.$grey
+    &:first-child
+      width: 16px
+      padding-left: 4px
+    &:not(:first-child)
+      padding-left: 14px
+    &_head
+      font-weight: 600
+      font-size: 10px
+      line-height: 20px
+      color: colors.$black
+      text-align: left
+  &__divider
+    margin: 12px 0

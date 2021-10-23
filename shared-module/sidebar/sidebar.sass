@@ -1,0 +1,28 @@
+.sidebar
+  max-width: 215px
+  padding: 8px
+  border: borders.$dark
+  border-radius: borders.$radius_block
+  position: absolute
+  left: 24px
+  &__nav
+    margin-top: 12px
+    display: flex
+    flex-direction: column
+    &-link
+      padding: 2px 4px
+      border-radius: borders.$radius
+      width: 100%
+      font-weight: 500
+      font-size: 14px
+      line-height: 24px
+      color: colors.$dark-grey
+      transition: color transitions.$short
+      &:not(&:last-child)
+        margin-bottom: 12px
+      &:not(&_active):hover
+        color: colors.$blue
+      &_active
+        background: colors.$blue_dark
+        color: colors.$white
+        cursor: default

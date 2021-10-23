@@ -1,0 +1,43 @@
+.button
+  padding: 8px 24px
+  font-weight: 600
+  font-size: 14px
+  line-height: 16px
+  letter-spacing: 0.5px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: borders.$transparent
+  box-sizing: border-box
+  border-radius: borders.$radius
+  cursor: pointer
+  user-select: none
+  color: colors.$black
+  background-color: colors.$transparent
+  transition: background-color transitions.$middle, color transitions.$middle, transform transitions.$short, border transitions.$middle
+  transform-origin: center
+  &_primary
+    color: colors.$white
+    background-color: colors.$blue
+    &:hover
+      color: colors.$blue
+      background-color: colors.$very-light-blue
+      border: borders.$primary
+    &-invert
+      background-color: colors.$transparent
+      border: borders.$primary
+      color: colors.$blue
+      &:hover
+        color: colors.$white
+        background-color: colors.$blue
+  &_secondary
+    color: colors.$blue
+    background-color: colors.$very-light-blue
+    &:hover
+      color: colors.$white
+      background-color: colors.$blue
+  &_text
+    color: colors.$blue
+    background-color: colors.$transparent
+    &:hover
+      transform: translateY(-2px)

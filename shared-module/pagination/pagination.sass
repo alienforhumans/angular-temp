@@ -1,0 +1,51 @@
+.pagination
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  color: colors.$grey
+  font-size: 12px
+  line-height: 24px
+  margin-top: 8px
+  &__input
+    color: colors.$grey
+    border: borders.$dark
+    border-radius: borders.$radius
+    padding: 8px
+    line-height: 16px
+    &:not(&_select)
+      width: 48px
+      -webkit-appearance: none
+      -moz-appearance: none
+      text-indent: 1px
+      text-overflow: ''
+      -moz-appearance: textfield
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    &_select
+      padding-right: 32.67px
+    &-keeper
+      margin-right: 8px
+      display: flex
+      align-items: center
+    &-text
+      margin-right: 8px
+  &__action
+    display: flex
+    align-items: center
+    padding: 4px 0
+    border: borders.$dark
+    border-radius: borders.$radius
+    width: 64px
+    height: 32px
+    &-keeper
+      display: flex
+      align-items: center
+  &__currenct-page
+    margin-right: 8px
+  &__button
+    width: 32px
+    height: 24px
+    padding: 0
+    &_prev
+      border-right: borders.$dark

@@ -1,0 +1,23 @@
+.custom-select
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+  &__icon
+    position: absolute
+    right: 8px
+    top: 50%
+    transform: translateY(-50%)
+    height: 16px
+    width: auto
+    transition: transform transitions.$middle
+  &__select:focus + &__icon
+    transform: rotateX(180deg) translateY(50%)
+  &__select
+    -webkit-appearance: none
+    -moz-appearance: none
+    text-indent: 1px
+    text-overflow: ''
+    padding: 8px 32px 8px 8px
+    &::-ms-expand
+      display: none

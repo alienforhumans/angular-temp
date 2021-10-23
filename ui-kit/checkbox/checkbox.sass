@@ -1,0 +1,27 @@
+.custom-checkbox
+  &__input
+    display: none
+  &__block
+    min-width: 16px
+    height: 16px
+    border: borders.$dark
+    border-radius: borders.$radius_small
+    border-width: 2px
+    transition: background-color transitions.$short, border-color transitions.$short
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    &:hover
+      border-color: colors.$blue
+    .custom-checkbox__input:checked + &
+      background-color: colors.$blue
+      border-color: colors.$blue
+    .custom-checkbox__input:disabled + &
+      opacity: .6
+      cursor: default
+      &:hover
+        border-color: colors.$light-grey
+  &__icon
+    width: 11.2px
+    height: 8px

@@ -1,0 +1,45 @@
+.search
+  position: relative
+  &__icon
+    position: absolute
+    left: 8px
+    top: 50%
+    transform: translateY(-50%)
+    height: 16px
+    .header__search &
+      left: 24px
+      height: 24px
+  &__input
+    border: borders.$dark
+    border-radius: borders.$radius
+    padding: 8px 8px 8px 32px
+    width: 100%
+    height: 100%
+    font-size: 12px
+    line-height: 16px
+    .header__search &
+      padding-left: 73px
+      border-radius: borders.$radius_block
+      background: colors.$additional-grey
+      border: borders.$additional
+    &:placeholder
+      font-size: 12px
+      line-height: 16px
+      color: colors.$grey
+  &__results
+    position: absolute
+    width: 100%
+    height: 0
+    max-height: 600px
+    top: calc(100%)
+    overflow-y: hidden
+    background: colors.$white
+    border: none
+    border-radius: borders.$radius_block
+    box-shadow: shadows.$shadow_search
+    transition: height transitions.$middle, top transitions.$middle, border transitions.$short
+    &_active
+      top: calc(100% + 8px)
+      height: auto
+      overflow-y: auto
+      border: borders.$light
